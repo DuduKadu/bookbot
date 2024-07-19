@@ -1,13 +1,31 @@
 def word_count(f):
     words = f.split()
-    print(len(words))
+    return len(words)
+
+def character_count(c):
+    text = c.lower()
+    characters = {}
+    
+    for char in text:
+        if char in characters:
+            characters[char] += 1
+        else:
+            characters[char] = 1
+    return characters
+ 
+def get_text(path):
+    with open(path) as f:
+        return f.read()
+        
+
 
 def main():
-    file_contents = ''
+    file_path = 'books/frankenstein.txt'
 
-    with open('books/frankenstein.txt') as f:
-        file_contents = f.read()
+    file_contents = get_text(file_path)
     
-    word_count(file_contents)
+    amount = word_count(file_contents)
+
+    char_amout = character_count(file_contents)
 
 main() 
