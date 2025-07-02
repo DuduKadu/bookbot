@@ -15,4 +15,15 @@ def count_letters(text: str):
             let[letter] += 1
     return let
 
+def sort_dict(letters: dict):
+    return letters["num"]
+
+def sorting(letter: dict):
+    to_sort = []
+
+    for key, value in letter.items():
+        to_sort.append({"char": key, "num": value})
+    return to_sort
+
+
     
