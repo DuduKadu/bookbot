@@ -6,5 +6,6 @@ dist/
 wheels/
 *.egg-info
 books/
+bookbot/
 # Virtual environments
 .venv
